@@ -1,81 +1,107 @@
-!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Lunaria</title>
+<title>Lunaria Jewelry</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+
 <style>
+
 body {
     margin: 0;
-    font-family: Arial;
+    font-family: 'Inter', sans-serif;
     background: #0b0b0b;
     color: white;
 }
 
 header {
-text-align: center;
-padding: 30px;
-font-size: 30px;
-letter-spacing: 5px;
+    text-align: center;
+    padding: 40px;
+    font-size: 40px;
+    letter-spacing: 8px;
+    font-family: 'Playfair Display', serif;
 }
 
-.container {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-gap: 20px;
-padding: 40px;
-}
-
-.card {
-background: #111;
-padding: 20px;
-border-radius: 15px;
-text-align: center;
-transition: 0.3s;
-}
-
-.card:hover {
-transform: scale(1.05);
-}
-
-.card img {
-width: 100%;
-border-radius: 10px;
-}
-
-.price {
-margin: 10px 0;
-}
-
-button {
-padding: 10px 20px;
-border: none;
-background: white;
-cursor: pointer;
+header span {
+    font-size: 14px;
+    letter-spacing: 3px;
 }
 
 #cart {
-position: fixed;
-top: 20px;
-right: 20px;
-background: white;
-color: black;
-padding: 10px;
-border-radius: 10px;
-} </style>
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: white;
+    color: black;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
 
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+}
+
+.card {
+    background: #0f0f0f;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #222;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.price {
+    margin: 10px 0;
+}
+
+button {
+    padding: 12px 25px;
+    border: 1px solid white;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: white;
+    color: black;
+}
+
+.buy-btn {
+    display: block;
+    margin: 40px auto;
+}
+
+</style>
 </head>
 
 <body>
 
-<header>LUNARIA ✨</header>
+<header>
+LUNARIA<br>
+<span>SILVER JEWELRY</span>
+</header>
 
 <div id="cart">🛒 0</div>
 
 <div class="container">
 
 <div class="card">
-<img src="https://via.placeholder.com/300">
+<img src="https://i.imgur.com/1.jpg">
 <h2>Anillo Luna</h2>
 <p>Plata 925 minimalista</p>
 <p class="price">$79.900</p>
@@ -83,16 +109,16 @@ border-radius: 10px;
 </div>
 
 <div class="card">
-<img src="https://via.placeholder.com/300">
-<h2>Collar Estrella</h2>
-<p>Plata 925</p>
+<img src="https://i.imgur.com/2.jpg">
+<h2>Collar Eclipse</h2>
+<p>Plata 925 elegante</p>
 <p class="price">$94.900</p>
-<button onclick="addToCart('Collar Estrella',94900)">Agregar</button>
+<button onclick="addToCart('Collar Eclipse',94900)">Agregar</button>
 </div>
 
 </div>
 
-<button onclick="buy()" style="margin:40px;">Finalizar compra</button>
+<button class="buy-btn" onclick="buy()">Finalizar compra</button>
 
 <script>
 let cart = [];
@@ -109,7 +135,7 @@ function buy(){
     cart.forEach(p => message += "- " + p + "%0A");
     message += "Total: $" + total;
 
-    window.open("https://wa.me/573022186456?text=" + message);
+    window.open("https://wa.me/573001234567?text=" + message);
 }
 </script>
 
